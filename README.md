@@ -1,1 +1,1 @@
-# CSCI152_InterdisciplinaryComputerScienceII
+# CSCI 152 - Interdisciplinary Computer Science II
