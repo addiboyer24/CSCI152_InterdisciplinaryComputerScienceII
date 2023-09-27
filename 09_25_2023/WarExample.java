@@ -8,6 +8,7 @@ public class WarExample{
         String[] cardDeck = new String[suits.length * cardValues.length ];
         int[] cardDeckValues = new int[suits.length * cardValues.length];
 
+        // Initialize the card deck.
         for (int i = 0; i < suits.length; i++){
             String suit = suits[i];
             for (int j = 0; j < cardValues.length; j++){
@@ -25,28 +26,32 @@ public class WarExample{
 
         // Shuffling.
         for (int i = 0; i < cardDeckValues.length; i++){
+
+            // Random index between 0-cardDeck.length -1.
             double r = Math.random();
             int n = cardDeckValues.length;
             int randomIndex = (int)(r*n);
+
+            // Swapping operations.
             String tempCard = cardDeck[i];
+            cardDeck[i] = cardDeck[randomIndex];
+            cardDeck[randomIndex] = tempCard;
 
             int temp = cardDeckValues[i];
             cardDeckValues[i] = cardDeckValues[randomIndex];
-            cardDeck[i] = cardDeck[randomIndex];
             cardDeckValues[randomIndex] = temp;
-            cardDeck[randomIndex] = tempCard;
         }
 
-        for(int i = 0; i < cardDeckValues.length; i++){
-            // System.out.println(cardDeck[i]);
-            // System.out.println(cardDeckValues[i]);
-        }
+        /*for(int i = 0; i < cardDeckValues.length; i++){
+            System.out.println(cardDeck[i]);
+            System.out.println(cardDeckValues[i]);
+        }*/
 
-        int[] playerDeck = new int[cardDeckValues.length];
-        int[] cpuDeck = new int[cardDeckValues.length];
-
+        // Deal with the number of games (passed in as command line arg).
         for (int gameNumber = 1; gameNumber <= numberOfPlays; gameNumber++){
             // Deal.
+            int[] playerDeck = new int[cardDeckValues.length];
+            int[] cpuDeck = new int[cardDeckValues.length];
 
             int playerCard = cardDeckValues.length / 2;
             int cpuCard = cardDeckValues.length / 2;
@@ -70,6 +75,7 @@ public class WarExample{
                 System.out.println("Player value: " + playerValue);
                 System.out.println("Cpu value: " + cpuValue);
 
+                // Rotate entries of each players' deck up one index.
                 for (int i = 1; i < playerCard; i++){
                     playerDeck[i-1] = playerDeck[i];
                 }
@@ -77,27 +83,30 @@ public class WarExample{
                 for (int i = 1; i < cpuCard; i++){
                     cpuDeck[i-1] = cpuDeck[i];
                 }
+                // ***
 
-                // [0][2][][]
-                // [1][3][][]
                 if (playerValue > cpuValue){
                     // Player wins.
+                    // put the cards from the hand at the bottom of the deck.
                     playerDeck[playerCard-1] = playerIndex;
                     playerDeck[playerCard] = cpuIndex;
-                    cpuDeck[cpuCard-1] = 0;
-                    playerCard += 1;
-                    cpuCard -= 1;
+                    cpuDeck[cpuCard-1] = 0; // deal with previous last card.
+                    playerCard += 1; // gained a card.
+                    cpuCard -= 1; // lost a card.
                 }
                 else if (playerValue < cpuValue){
                     // Cpu wins.
+                    // put the cards from the hand at the bottom of the deck.
                     cpuDeck[cpuCard-1] = cpuIndex;
                     cpuDeck[cpuCard] = playerIndex;
-                    playerDeck[playerCard-1] = 0;
-                    cpuCard += 1;
-                    playerCard -= 1;
+
+                    playerDeck[playerCard-1] = 0; // deal with previous last card.
+                    cpuCard += 1; // gained a card.
+                    playerCard -= 1; // lost a card.
                 }
                 else{
                     // Tie..
+                    // TODO!! Implement the "tiebreaker" logic
                 }
 
                 System.out.println("Player cards: " + playerCard);
