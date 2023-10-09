@@ -1,0 +1,14 @@
+public class ExamPrep{
+    public static void main(String[] args) {
+
+        // Arrays.
+        // boolean - &&, ||, !
+        // >, <, >=, <=, ==, !=
+
+        // Answers: (type, value)
+        // (String, "03")
+        // (int, 120)
+        System.out.println("Hello World");
+        // "Hello \t World"
+    }
+}
