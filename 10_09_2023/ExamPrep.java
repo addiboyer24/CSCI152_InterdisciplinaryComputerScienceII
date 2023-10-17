@@ -1,6 +1,11 @@
 public class ExamPrep{
     public static void main(String[] args) {
 
+        while(true){
+            // What is this called?
+        }
+
+        System.out.println(i);
         // Arrays.
         // boolean - &&, ||, !
         // >, <, >=, <=, ==, !=
@@ -8,7 +13,7 @@ public class ExamPrep{
         // Answers: (type, value)
         // (String, "03")
         // (int, 120)
-        System.out.println("Hello World");
+        // System.out.println("Hello World");
         // "Hello \t World"
     }
 }

@@ -23,7 +23,7 @@ public class Random{
         // literal.
         // variable name.
         // function call to another function with compatible return type.
-        return GetRandom();
+        return returnValue;
     }
 
     private static String GetRandom(int n, String f, char g){
