@@ -13,7 +13,9 @@ public class Fact{
         return result;
     }
 
-    public static long factorialRecursive(long n){
+    // short, int, long
+    public static long factorialRecursive(long n){ // cover bits in byte.
+        // 8 bits -> byte, 2 bits, nibble.
         if (n == 0) return 1;
 
         if (n == 1) return 1;

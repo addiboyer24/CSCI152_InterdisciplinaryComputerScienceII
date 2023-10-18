@@ -1,5 +1,6 @@
 public class Fib{
 
+    // 0, 1, 1, 2, 3, 5, 8, ...
     public static long FibiBottomUp(int n){ // Bottom up dynamic programming.
         long[] answers = new long[n+1]; // n+1 to account for 0th fib.
         answers[0] = 0;
@@ -22,6 +23,7 @@ public class Fib{
         // Reduction Step.
 
         return Fibi(n-1) + Fibi(n-2);
+        // Fibi(n) = Fibi(n-1) + Fibi(n-2)
     }
     public static void main(String[] args) {
         long n = Long.parseLong(args[0]);
