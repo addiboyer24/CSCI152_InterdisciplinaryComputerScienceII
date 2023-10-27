@@ -30,7 +30,7 @@ public class SimpleSort{
         StdOut.printf("Took %f seconds to sort an array of size %d", runtime, n);
     }
 
-    private static double timeTrial(int n){
+    public static double timeTrial(int n){
         Stopwatch watch = new Stopwatch();
         int[] randomArray = new int[n];
         for (int i = 0; i < n; i++){

@@ -1,7 +1,7 @@
 public class WarGraphical{
 
-    private static String[] suits = { /*"hearts","diamonds",*/  "spades"/*, "clubs"*/ };
-    private static String[] cardValues = { /*"2",*/ "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace" };
+    private static String[] suits = { "hearts","diamonds",  "spades", "clubs" };
+    private static String[] cardValues = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace" };
     private static int cardDeckSize = suits.length * cardValues.length;
 
     private static int playerCards;

@@ -5,7 +5,7 @@ public class ExamPrep{
             // What is this called?
         }
 
-        System.out.println(i);
+        // System.out.println(i);
         // Arrays.
         // boolean - &&, ||, !
         // >, <, >=, <=, ==, !=
