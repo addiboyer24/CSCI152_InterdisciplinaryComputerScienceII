@@ -3,8 +3,6 @@ public class CustomString{
     // instance variables (declare here).
     private char[] value;
 
-    private int length;
-
     public CustomString(){ // Default constructor.
     }
 

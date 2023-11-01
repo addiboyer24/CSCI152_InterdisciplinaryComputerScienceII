@@ -1,3 +1,4 @@
+
 public class StringClient{
     public static void main(String[] args) {
         char[] string = {'h', 'i' };
