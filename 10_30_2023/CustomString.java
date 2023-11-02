@@ -36,6 +36,17 @@ public class CustomString{
         return this.value[i];
     }
 
+    public CustomString substring(int i, int j){
+
+        // 1, 2 - "hi"
+        char[] substring = new char[j - i];
+        for (int start = i; start < j; start++){
+            substring[start-i] = this.value[start];
+        }
+
+        return new CustomString(substring);
+    }
+
     // Private instance method (used internally to the class).
     private int randomNumber(){
         return (int)(Math.random() * this.value.length);
