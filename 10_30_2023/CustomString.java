@@ -38,7 +38,6 @@ public class CustomString{
 
     public CustomString substring(int i, int j){
 
-        // 1, 2 - "hi"
         char[] substring = new char[j - i];
         for (int start = i; start < j; start++){
             substring[start-i] = this.value[start];
@@ -50,5 +49,13 @@ public class CustomString{
     // Private instance method (used internally to the class).
     private int randomNumber(){
         return (int)(Math.random() * this.value.length);
+    }
+
+    public String toString(){
+        String returnString = "";
+        for (int i = 0; i < this.value.length; i++){
+            returnString += this.value[i];
+        }
+        return returnString;
     }
 }
