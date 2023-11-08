@@ -20,4 +20,9 @@ public class Dog implements Animal{ // Dog must implement the methods in Animal 
     public String speak(){
         return "WOOF";
     }
+
+    public boolean isBirthday(String dateToCompare){
+        // return this.dob == dateToCompare; // What's the difference?
+        return this.dob.equals(dateToCompare);
+    }
 }
