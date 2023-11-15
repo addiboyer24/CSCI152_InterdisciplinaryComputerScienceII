@@ -20,7 +20,8 @@ public class MysteryString {
         StdOut.printf("%s \"%s\" this special word.\n\n", candidate, isThisSpecialWord(candidate) ? "is" : "is not");
     }
     public static void main(String[] args) throws IOException {
-        Scanner myScanner = new Scanner(new File("./mysterywords.txt"), Charset.defaultCharset());
+        String fileName = args[0];
+        Scanner myScanner = new Scanner(new File(fileName), Charset.defaultCharset());
         String[] candidates = myScanner.next().split(",");
         for (String candidate : candidates){
             printPrompt(candidate);
