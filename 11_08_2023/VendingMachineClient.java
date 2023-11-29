@@ -1,5 +1,7 @@
 public class VendingMachineClient{
     public static void main(String[] args) {
+
+        // lambda.
         ItemPrice myCandyBarPrice = (double basePrice) -> basePrice + (basePrice * 0.03);
         ItemPrice myToyPrice = (double basePrice) -> basePrice;
 
