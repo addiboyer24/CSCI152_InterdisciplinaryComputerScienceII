@@ -34,7 +34,7 @@ public class Sorting {
 
     public static void selectionSort(int[] myArray){
         int n = myArray.length;
-        // 1, 2, 3
+        // 3, 1, 2
         for (int i = 1; i < n; i++){
             for (int j = i; j > 0; j--){
                 if (myArray[j] > myArray[j-1]) break;

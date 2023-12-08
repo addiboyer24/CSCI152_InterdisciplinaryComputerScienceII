@@ -2,14 +2,22 @@ public class Search{
 
     public static int binarySearch(int[] myArray, int numberToFind, int i, int j){
         int mid = i + (j - i) / 2;
-        StdOut.printf("i: %d, j: %d\n", i, j);
-        if (i > j) return -1; // Base case to cover when numberToFind is not in the array*
+        if (i > j){
+            return -1; // Base case to cover when numberToFind is not in the array*
+        }
         int currentValue = myArray[mid];
-        if (currentValue == numberToFind) return mid; // Base case when we find our number.
-        else if (currentValue > numberToFind) return binarySearch(myArray, numberToFind, i, mid - 1); // Reduction step.
+        if (currentValue == numberToFind){
+            return mid; // Base case when we find our number.
+        }
+        else if (currentValue > numberToFind){
+            return binarySearch(myArray, numberToFind, i, mid - 1); // Reduction step.
+        }
         else{
             return binarySearch(myArray, numberToFind, mid + 1, j); // Reduction step.
         }
+        // Best case - constant time (find our element on the first recursive call)
+        // Worst case - lg(n) (didn't find out element, or found element on last recursive call)
+        // Average case - worst case / 2 lg(sqrt(n)) 1/2 lg(n)
     }
 
     public static int bruteForceSearch(int[] myArray, int numberToFind){

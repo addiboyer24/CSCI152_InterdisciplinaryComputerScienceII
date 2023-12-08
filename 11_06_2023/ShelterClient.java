@@ -8,7 +8,7 @@ public class ShelterClient{
         Cat myCat = new Cat("Mittens", 'm', "06/06/1966", Color.BLACK);
         String whatDoesTheCatSay = myCat.speak();
         System.out.println(whatDoesTheCatSay);*/
-        Animal myCat = new Cat("Mittens", 'm', "06/06/1966", Color.BLACK);
+        Animal myCat = new Fish("Mittens", 'm', "06/06/1966", Color.BLACK);
         Animal myDog = new Dog("Boots", 'f', "11/06/2023", Color.BLUE);
 
         Animal[] myAnimals = {myCat, myDog};

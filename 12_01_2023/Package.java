@@ -5,6 +5,10 @@ public class Package implements Comparable<Package>{
     public Package(String addressedTo){
         this.addressedTo = addressedTo;
     }
+
+    // Generically a.compareTo(b); - equal this will return 0.
+    // a.compareTo(b) - > 0 if a is greater than b.
+    // a.compareTo(b) - < 0 if a is less than b.
     @Override
     public int compareTo(Package o) {
         return this.addressedTo.compareTo(o.getAddressedTo());
